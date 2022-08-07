@@ -1,2 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿string[] inputArray = { "hello", "2", "world", ":-)", "1234", "1567" };
