@@ -3,9 +3,7 @@
 // 
 string PrintArray(string[] inputArray)
 {
-    string result = string.Empty;
-
-    return result;
+    return string.Join(",", inputArray);
 }
 
 // 
