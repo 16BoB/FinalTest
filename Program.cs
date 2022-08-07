@@ -1,11 +1,12 @@
 ﻿string[] inputArray = { "hello", "2", "world", ":-)", "1234", "1567" };
 
-// 
+// Медод для мечати массива
 string PrintArray(string[] inputArray)
 {
-    return string.Join(",", inputArray);
+    return string.Join(", ", inputArray);
 }
 
+// Метод для подсчета строк в массиве длинной меньше или равных 3 символов
 int CountStringInArray(string[] input)
 {
     int len = inputArray.Length;
@@ -21,8 +22,9 @@ int CountStringInArray(string[] input)
     return count;
 }
 
-// 
-string[] FillNewArray(string[] inputArray, int countWords)
+// Метод для создания нового массива из строк длинной меньше или равных 3 символов, которые найдет во входном массиве
+// ! в аргумент countWords передаем результат работы метода CountStringInArray !
+string[] CreateNewArray(string[] inputArray, int countWords)
 {
     int len = inputArray.Length;
     string[] outputArray = new string[countWords];
@@ -39,3 +41,9 @@ string[] FillNewArray(string[] inputArray, int countWords)
 
     return outputArray;
 }
+
+PrintArray(inputArray);
+
+string[] outputArray = CreateNewArray(inputArray, CountStringInArray(inputArray));
+
+PrintArray(outputArray);
